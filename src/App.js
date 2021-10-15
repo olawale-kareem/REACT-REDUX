@@ -28,8 +28,6 @@ function App() {
       <button data-testid='increaseBtn' onClick={() => dispatch(increment())}>Increase</button>
       <button data-testid='resetBtn' onClick={() => dispatch(reset())}>Reset</button>
       <button data-testid='decreaseBtn' onClick={() => dispatch(decrement())}>Decrease</button>
-      <button data-testid='postBtn' onClick={() => dispatch(apiCall())}>Post</button>
-
 
       <h2>For Logged in users only</h2>
       <p>Log in to see a secret about me</p>
@@ -44,8 +42,10 @@ function App() {
         </div>
       ) : ('')}
 
+      <p>Click the post button to populate page with post</p>
+      <button data-testid='postBtn' onClick={() => dispatch(apiCall())}>Post</button>
       {data.map(post =>
-        <h3 key={post.id}>{post}</h3>
+        <h3 key={post.id}>{post.title}</h3>
       )}
     </div>
   );
