@@ -22,7 +22,6 @@ function App() {
       <h1 test >
          Hello World <br /> A little Redux Project. YaaY!
       </h1>
-      {console.log(data)}
       <h3 data-testid='header'>Counter</h3>
       <h3 data-testid='counter'>{counter}</h3>
       <button data-testid='increaseBtn' onClick={() => dispatch(increment())}>Increase</button>
